@@ -66,7 +66,7 @@ async function startServer() {
     res.json({ answer: "AI is ready for your BCA project!" });
   });
 
-  // ONLINE DEPLOYMENT LOGIC
+  // DEPLOYMENT LOGIC
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'dist')));
     app.get('*', (req, res) => {
@@ -78,7 +78,7 @@ async function startServer() {
   }
 
   app.listen(PORT, () => {
-    console.log(`🚀 EduHub is live!`);
+    console.log(`🚀 Server online!`);
   });
 }
 
